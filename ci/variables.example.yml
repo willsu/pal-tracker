@@ -8,3 +8,6 @@ github-private-key: |
   REPLACE WITH YOUR PRIVATE KEY HERE
   -----END RSA PRIVATE KEY-----
 
+aws-access-key-id: <YOUR_ACCESS_KEY>
+aws-secret-access-key: <YOUR_SECRET_KEY>
+aws-bucket: <YOUR_AWS_S3_BUCKET>
