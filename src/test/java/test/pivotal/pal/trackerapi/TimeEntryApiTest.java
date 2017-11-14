@@ -28,7 +28,7 @@ public class TimeEntryApiTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-    private TimeEntry timeEntry = new TimeEntry(123, 456, LocalDate.parse("2017-01-08"), 8);
+    private TimeEntry timeEntry = new TimeEntry(123, 456, "2017-01-08", 8);
 
     @Test
     public void testCreate() throws Exception {
@@ -84,7 +84,7 @@ public class TimeEntryApiTest {
     @Test
     public void testUpdate() throws Exception {
         Long id = createTimeEntry();
-        TimeEntry updatedTimeEntry = new TimeEntry(2, 3, LocalDate.parse("2017-01-09"), 9);
+        TimeEntry updatedTimeEntry = new TimeEntry(2, 3, "2017-01-09", 9);
 
 
         ResponseEntity<String> updateResponse = restTemplate.exchange("/time-entries/" + id, HttpMethod.PUT, new HttpEntity<>(updatedTimeEntry, null), String.class);
